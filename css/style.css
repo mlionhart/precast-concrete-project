@@ -1,0 +1,987 @@
+/* style.css */
+
+/* created by Bruce Elgort */
+
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+:root {
+    --common-border-radius: .15em;
+    --most-common-color: #7a90b5;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+body {
+    font-family: 'Jura', sans-serif;
+}
+
+.home-container-1 {
+    background: url(../images/companyslide.png);
+    object-fit: cover;
+    background-position: center;
+    height: 100vh;
+    max-width: 1376px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: 
+    "logo logo nav nav nav nav phone estimates hamburger" 
+    ". hero hero hero hero . spartan spartan spartan" 
+    ". products products products products badges badges badges badges";
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    opacity: .6;
+    background: var(--most-common-color);
+}
+
+.home-header-logo {
+    width: 100%;
+    grid-area: logo;
+    text-align: center;
+    line-height: .8;
+}
+
+.home-header-logo h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.precast {
+    font-size: 1.2rem;
+}
+
+.home-nav-main {
+    grid-area: nav;
+    font-size: 1.1rem;
+}
+
+.home-nav-main ul {
+    list-style-type: none;
+}
+
+.home-nav-main ul li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #FFFFFF;
+}
+
+.home-nav-main a:link, .home-nav-main a:visited, .home-nav-main a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-nav-main a:hover, .home-nav-main a:focus {
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-phone {
+    grid-area: phone;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.home-phone a:link, .home-phone a:visited, .home-phone a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-phone a:hover, .home-phone a:focus {
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-estimates {
+    grid-area: estimates;
+    color: #000;
+    background: #FFFFFF;
+    padding: 8px 15px 8px 15px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.home-estimates a:link, .home-estimates a:visited, .home-estimates a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+.home-estimates a:hover, .home-estimates a:focus {
+    text-decoration: underline;
+}
+
+.hamburgermenu {
+    grid-area: hamburger;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+.home-hero {
+    grid-area: hero;
+    color: #FFFFFF;
+}
+
+.home-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    line-height: 1.1;
+}
+
+.home-hero p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.home-spartan {
+    display: grid;
+    place-items: center;
+    grid-area: spartan;
+    height: 350px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 50px 50px 50px 100px;
+    text-align: center;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 50%, 40% 40%, 50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50% */
+}
+
+.home-spartan p {
+    font-size: 1.25rem;
+}
+
+.home-spartan-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.home-badges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: badges;
+    color: #FFFFFF;
+    background: var(--most-common-color);
+    height: 180px;
+    width: 100%;
+    padding-left: 80px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    text-align: center;
+}
+
+.home-badges img {
+    height: 80px;
+    width: 80px;
+}
+
+.home-products {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: products;
+    color: #FFFFFF;
+    background: #FFFFFF;
+    height: 150px;
+    width: 100%;
+    padding-left: 80px;
+    margin-right: -200px;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    text-align: center;
+}
+
+.home-products div {
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    background: rgba(82, 100, 124, 0.8);
+    margin-right: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 8px;
+    margin-left: -30px;
+}
+
+/* ---------- Section 2 - About --------- */
+
+.about-container-1 {
+    background: white;
+    display: grid;
+    width: 1376px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 700px 100px;
+    grid-template-areas: 
+    ". . . . . . . . . . . ."
+    ". . . info info info info form form . . ."
+    ". . . . . . . . . . . .";
+}
+
+.about-container-1 h2 {
+    font-weight: 700;
+}
+
+.estimate-header {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.estimate-header img {
+    width: 40px;
+    margin-right: .9em;
+    margin-bottom: .37em;
+}
+
+.estimate-header h2 {
+    width: 130px;
+}
+
+/* .estimate-header img {
+    width: 100px;
+} */
+
+.about-container-1 h2 {
+    font-size: 1.35rem;
+    color: #016EB5;
+}
+
+.about-info {
+    grid-area: info;
+    background: linear-gradient(to right, #f7f7f7, #ffffff);
+    position: relative;
+    padding: 3em;
+    border-radius: var(--common-border-radius);
+}
+
+.about-info p {
+    margin-bottom: 1.5em;
+}
+
+.about-info h2::after {
+    content: '';
+    height: 1.3px;
+    width: 100px;
+    display: block;
+    background: var(--most-common-color);
+    margin-top: 1em;
+    margin-bottom: .8em;
+}
+
+.estimate-form {
+    grid-area: form;
+    width: 120%;
+    border-radius: var(--common-border-radius);
+}
+
+#arm {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: var(--most-common-color);
+    position: absolute;
+    top: 250px;
+    left: -65px;
+    padding: 1em;
+}
+
+.about-container-1 .form-inputs {
+    background: #f7f7f7;
+    padding: 2em;
+}
+
+.form-inputs textarea {
+    width: 100%;
+}
+
+.estimate-form button {
+    width: 100%;
+    margin: .5em 0;
+    background: var(--most-common-color);
+    color: white;
+    padding: .25em;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: .2em .6em .2em .6em;
+}
+
+/* ---------- Section 3 - Smith Rock ---------- */
+
+.smith-container {
+    position: relative;
+    background: url(../images/Smith\ Rock.png);
+    object-fit: cover;
+    background-position: center;
+    height: 90vh;
+    max-width: 1376px;
+    margin: 3em auto;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-rows: 20% 425px 10%;
+}
+
+.more-about-us {
+    /* position: relative; */
+    height: 110%;
+    background: rgba(122, 144, 181, .8);
+    border-radius: var(--common-border-radius);
+    padding: 2em;
+    padding-right: 5em;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    clip-path: polygon(85% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.smith-container img {
+    width: 75px;
+    position: absolute;
+    top: -30px;
+    left: -40px;
+}
+
+.more-about-us h2 {
+    font-size: 1.5rem;
+}
+
+.more-about-us p {
+    font-size: .95rem;
+}
+
+.smith-container h2::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    display: block;
+    background: #ffffff;
+    margin-top: .7em;
+    margin-bottom: .7em;
+}
+
+/* ---------- Section 4 - Partners-Solutions ---------- */
+
+.partners-solutions-container {
+    position: relative;
+    height: 100vh;
+    max-width: 1376px;
+    display: grid;
+    grid-template-rows: 20vh 80vh;
+    margin: 0 auto;
+    margin-bottom: 10em;
+}
+
+.partners {
+    display: flex;
+    align-items: center;
+    background: var(--most-common-color);
+    height: 70%;
+    padding-left: 8em;
+    clip-path: polygon(30% 0, 37% 100%, 0 100%, 0 0);
+    /* z-index: 1; */
+}
+
+.partner-images {
+    position: absolute;
+    top: 0;
+    left: 360px;
+}
+
+.partners h2 {
+    color: #FFFFFF;
+    margin-left: .5em;
+}
+
+.partner-images img {
+    width: 200px;
+    height: 110px;
+}
+
+img#special {
+    width: 60px;
+    height: 60px;
+}
+
+.solutions {
+    position: relative;
+    grid-row: 2 / 3;
+}
+
+.solutions-background {
+    background: url(../images/935a88ba431ad1474c4cb42bc80502f6.png);
+    object-fit: cover;
+    /* background-position: center; */
+    height: 65vh;
+    max-width: 1376px;
+}
+
+.h2-button-container {
+    position: absolute;
+    width: 300px;
+    text-align: center;
+    bottom: 180px;
+    right: 150px;
+}
+
+.solutions-background h2 {
+    font-size: 1.35rem;
+    color: white;
+    font-weight: 700;
+}
+
+.h2-button-container button {
+    color: var(--most-common-color);
+    font-weight: 600;
+    width: 50%;
+    padding: .4em;
+    border-radius: .2em .8em;
+}
+
+.solutions-info {
+    position: absolute;
+    height: 65vh;
+    background: #f7f7f7;
+    width: 45%;
+    top: 175px;
+    left: 200px;
+    padding: 4em;
+}
+
+.solutions-info a {
+    color: var(--most-common-color);
+    font-weight: 600;
+}
+
+.solutions-info h2 {
+    color: var(--most-common-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.solutions-info h2::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    display: block;
+    background: var(--most-common-color);
+    margin-top: .7em;
+    margin-bottom: .7em;
+}
+
+/* ---------- Section 5 - Products/Brands/Info ---------- */
+
+.exclusive-brands-container {
+    max-width: 1376px;
+    display: flex;
+    flex-flow: row;
+    height: 50vh;
+    margin: 0 auto;    
+}
+
+.cement-image-container {
+    filter: drop-shadow(15px -15px 1px #f5f5f5);
+}
+
+.cement-image-container img {
+    width: 45vw;
+    clip-path: polygon(77% 0, 100% 100%, 0 100%, 0 0);
+}
+
+.exclusive-brands {
+    width: 35vw;
+    margin-left: 4em;
+}
+
+.exclusive-brands h2 {
+    color: var(--most-common-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.exclusive-brands h2::after {
+    content: '';
+    height: 2px;
+    width: 50px;
+    display: block;
+    background: var(--most-common-color);
+    margin-top: .5em;
+    margin-bottom: .7em;
+}
+
+.exclusive-brands button {
+    background: var(--most-common-color);
+    color: white;
+    padding: .5em 1em;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .2em .6em .2em .6em;
+    letter-spacing: 1.25px;
+}
+
+.newer-products-container {
+    max-width: 1376px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    height: 50vh;
+    margin: 8em auto;  
+}
+
+.newer-products {
+    width: 35vw;
+    margin-right: 3em;
+}
+
+.newer-products h2 {
+    color: var(--most-common-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.newer-products h2::after {
+    content: '';
+    height: 2px;
+    width: 50px;
+    display: block;
+    background: var(--most-common-color);
+    margin-top: .5em;
+    margin-bottom: .7em;
+}
+
+.newer-products button {
+    background: var(--most-common-color);
+    color: white;
+    padding: .5em 1em;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .2em .6em .2em .6em;
+    letter-spacing: 1.25px;
+}
+
+.manhole-base-image-container {
+    filter: drop-shadow(-15px -15px 1px #f5f5f5);
+}
+
+.manhole-base-image-container img {
+    width: 45vw;
+    clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%, 23% 0);
+}
+
+/* ---------- Section 6 - Footer/Sitemap ---------- */
+
+.footer-container {
+    max-width: 1376px;
+    margin: 0 auto;
+}
+
+.quote-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    /* grid-template-columns: auto 8% 45% 8% auto; */
+    /* position: relative; */
+    background: url(../images/mockaroon-YqUeLG7fMr4-unsplash.png);
+    height: 45vh;
+}
+
+blockquote {
+    width: 600px;
+}
+
+.site-map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    background: #f7f7f7;
+}
+
+.site-map div {
+    width: 175px;
+    height: 150px;
+    margin: 0 10px;
+}
+
+.site-map li, p {
+    list-style: none;
+    padding-left: .8em;
+}
+
+.site-map a {
+    color: var(--most-common-color);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.contact-item .phone-number {
+    margin-left: .9em;
+}
+
+
+.contact-item button a {
+    color: #ffffff;
+}
+
+.contact-item button {
+    margin-left: .9em;
+    margin-top: 1em;
+    background: var(--most-common-color);
+    padding: .5em 1em;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .2em .6em .2em .6em;
+    letter-spacing: 1.25px;
+}
+
+.phone-number {
+    letter-spacing: 2px;
+}
+
+.contact-item p {
+    margin-bottom: 5px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.site-map h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.social-item .icons {
+    margin-left: 25px;
+    margin-top: -.5em;
+}
+
+.icons i {
+    width: 8px;
+    margin: 5px;
+}
+
+.social-item img {
+    width: 50px;
+    margin-left: 45px;
+}
+
+.social-item span {
+    font-size: 1rem;
+    margin-left: 40px;
+}
+    
+/* Large devices (Desktops, 1200px and down) */
+@media (max-width: 1200px) {
+    .about-container-1 {
+        grid-template-areas: 
+    ". . . . . . . . . . . ."
+    ". . info info info info form form . . . ."
+    ". . . . . . . . . . . .";
+    }
+
+    .smith-container {
+        grid-template-columns: auto 50% auto;
+    }
+
+    .partners {
+        padding-left: 4em;
+    }
+
+    .partner-images {
+        left: 270px;
+    }
+
+    .partner-images img {
+        width: 170px;
+    }
+
+    .h2-button-container {
+        right: 60px;
+    }
+
+    .solutions-info {
+        width: 55%;
+        margin-right: 5em;
+        margin-left: -8em;
+    }
+
+    .exclusive-brands, .newer-products {
+        width: 80%;
+    }
+
+}
+/* Medium devices (Tablets, 992px and down) */
+@media (max-width: 992px) {
+    .home-container-1 {
+        grid-template-areas: "logo logo logo . . . . . hamburger" ". hero hero hero hero hero hero hero ." "badges badges badges badges badges badges badges badges badges";
+        grid-template-rows: 200px 300px 300px;
+    }
+    .home-header-logo {
+        margin-left: 30px;
+    }
+    .home-nav-main {
+        display: none;
+    }
+    .home-estimates {
+        display: none;
+    }
+    .home-phone {
+        display: none;
+    }
+    .home-spartan {
+        display: none;
+    }
+    .home-hero {
+        grid-area: hero;
+        text-align: center;
+    }
+    .home-badges {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 0;
+    }
+    .home-products {
+        display: none;
+    }
+
+    .about-container-1 {
+        width: 100%;
+        grid-template-areas: 
+        ". . . . . . . . . . . ."
+        ". info info info info info info form form form form ."
+        ". . . . . . . . . . . .";
+    }
+
+    .smith-container {
+        grid-template-columns: auto 62% auto;
+    }
+
+    .partners {
+        padding-left: 1em;
+    }
+
+    .partner-images {
+        left: 220px
+    }
+
+    .partner-images img {
+        width: 125px;
+    }
+
+    .partners-solutions-container {
+        margin-bottom: 20em;
+    }
+
+    .h2-button-container {
+        right: 33%;
+        bottom: 62%;
+    }
+
+    .solutions-info {
+        width: 70%;
+        margin-top: 10em;
+        margin-left: -4em;
+    }
+
+    
+}
+/* Small devices (landscape phones, 768px and down) */
+@media (max-width: 768px) {
+    .about-container-1 {
+        margin-top: 10em;
+        display: flex;
+        width: 80%;
+        flex-flow: column;
+    }
+
+    .estimate-form {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+    }
+
+    #arm {
+        top: -120px;
+        left: 30vw;
+    }
+
+    .about-container-1 h2 {
+        text-align: center;
+    }
+
+    .about-container-1 h2::after {
+        margin: .9em auto;
+        width: 20%
+    }
+
+    .about-info {
+        margin-bottom: 3em;
+    }
+
+    .home-badges {
+        margin-top: 8em;
+    }
+
+    .smith-container {
+        grid-template-columns: auto 90% auto;
+    }
+
+    .more-about-us {
+        clip-path: none;
+        height: 120%;
+    }
+
+    .more-about-us h2 {
+        text-align: center;
+    }
+
+    .more-about-us h2::after {
+        margin: .9em auto;
+        width: 20%;
+    }
+
+    .partners-solutions-container {
+        display: grid;
+        height: auto;
+        justify-content: center;
+        grid-template-areas: 
+        "partners"
+        "images"
+        "solutions";
+        margin-bottom: -3em;
+    }
+
+    .partners {
+        padding-left: 3em;
+        margin: 0 auto;
+        margin-left: 50px;
+        width: 400px;
+        grid-area: partners;
+        clip-path: polygon(70% 0, 87% 100%, 0 100%, 0 0);
+        /* width: 100%; */
+    }
+
+    .partner-images {
+        margin: 0 auto;
+        position: static;
+        grid-area: images;
+        width: 200px;
+    }
+
+    .solutions {
+        grid-area: solutions;
+    }
+
+    .partners-solutions-container {
+        margin-bottom: 85em;
+        height: auto;
+    }
+
+    .h2-button-container {
+        right: 80px;
+        bottom: 150px;
+    }
+
+    .solutions-info {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 25em;
+        margin-left: -8.5em;
+        height: auto;
+    }
+
+    .solutions-info h2 {
+        text-align: center;
+    }
+
+    .solutions-info h2::after {
+        margin: .9em auto;
+        width: 20%;
+    }
+
+    .exclusive-brands-container {
+        font-size: .5rem;
+        height: 25vh;
+    }
+
+    .exclusive-brands-container h2 {
+        font-size: .7rem;
+    }
+
+    .newer-products-container {
+        font-size: .5rem;
+        height: 25vh;
+    }
+
+    .newer-products-container h2 {
+        font-size: .7rem;
+    }
+
+    .newer-products-container button, .exclusive-brands-container button {
+        font-size: .5rem;
+    }
+
+    blockquote {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .site-map div {
+        width: 100px;
+    }
+
+    .site-map h2, .site-map a, .site-map p {
+        font-size: .7rem;
+    }
+
+    #rogue {
+        font-size: 1rem;
+        margin-left: 2.5em;
+    }
+
+    #rogue span {
+        margin-left: 0;
+    }
+}
+/* Extra small devices (Portrait phones, 576px and down) */
+@media (max-width: 576px) {
+    
+}
+
